@@ -14,6 +14,14 @@
 </head>
 
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <i class="fa-solid fa-spinner"></i>
+            <h2>Loading<span class="dots"></span></h2>
+        </div>
+    </div>
+    
     <!-- =======Navigation Bar======= -->
     <header class="header">
 
@@ -536,6 +544,15 @@
             // Remove the blur effect
             document.querySelector('.content-wrapper').classList.remove('blur');
         }
+
+         document.addEventListener("DOMContentLoaded", function () {
+            const loadingScreen = document.getElementById("loading-screen");
+        
+            // Set a timeout to hide the loading screen
+            setTimeout(() => {
+                loadingScreen.classList.add("hidden");
+            }, 5000); // 5000ms = 5 seconds (adjust as needed)
+        });
     </script>
 </body>
 
